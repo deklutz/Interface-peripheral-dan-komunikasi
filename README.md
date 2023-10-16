@@ -1,2 +1,2 @@
-# Interface-peripheral-dan-komunikasi
-Untuk memenuhi mata kuliah IPK semester 3
+#Interface, Peripheral dan Komunikasi
+Contains Source Code
