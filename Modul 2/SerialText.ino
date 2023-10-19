@@ -4,7 +4,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);  // set alamat LCD menjadi 0x27 untuk displa
 void setup(){ 
   lcd.init();
   lcd.backlight();  // Make sure backlight is on
-  lcd.begin(16, 2); 
+  lcd.begin(16, 2);
   Serial.begin(9600); 
 } 
 
