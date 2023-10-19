@@ -8,7 +8,6 @@ void setup() {
   pinMode(tombol2, INPUT);
   pinMode(tombol3, INPUT);
   lcd.init();
-  // lcd.clear();
   lcd.backlight();  // Make sure backlight is on
 
   // Print a message on both lines of the LCD.
