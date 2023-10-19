@@ -1,7 +1,7 @@
 int buzz = 11; 
 int senRead = A1; 
 int limit = 850;
-int pd = A1
+int pd = A1;
 
 void setup() { 
  pinMode(pd,OUTPUT); 
