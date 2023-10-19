@@ -1,7 +1,7 @@
 int ledA = 9, ledB = 10, ledC = 11; // Pin yang digunakan untuk menaruh LED 
 int pot = A0;
 int i; 
-int data
+int data;
 
 void setup(){ 
 pinMode(ledA, OUTPUT); // Set LED sebagai output
