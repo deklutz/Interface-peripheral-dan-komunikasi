@@ -1,23 +1,29 @@
-#include <LiquidCrystal_I2C.h> // Library yang digunakan
-LiquidCrystal_I2C lcd(0x27, 16, 2);  // set alamat LCD menjadi 0x27 untuk display 16x2
-int tombol = 5;
+#include <LiquidCrystal_I2C.h>
+LiquidCrystal_I2C lcd(0x27, 16, 2);  // set the LCD address to 0x3F for a 16 chars and 2 line display
+int tombol1 = 5;
 
-void setup(){ 
-  pinMode(tombol, INPUT);
+void setup() {
+  pinMode(tombol1, INPUT);
+  lcd.backlight();
   lcd.init();
-  lcd.backlight();  // Make sure backlight is on
   lcd.begin(16, 2);
-  lcd.setCursor(2, 0);  //Set cursor to character 2 on line 0
-  lcd.print("Hello world!");
-  Serial.begin(9600); 
-} 
-
-void loop() { 
-   if (Serial.available()) { 
-    delay(100); 
-    lcd.clear(); 
- while (Serial.available() > 0) { 
-    lcd.write(Serial.read()); 
- } 
- } 
+  Serial.begin(9600);
+  lcd.print("Hello");
+}
+void loop() {
+  if (Serial.available()) {
+    delay(100);
+    lcd.clear();
+    while (Serial.available() > 0) {
+      lcd.write(Serial.read());
+    }
+  }
+  if (digitalRead(tombol1) == LOW) {
+      for (int positionCounter = 0;
+           positionCounter < 25;
+           positionCounter++) {
+        lcd.scrollDisplayRight();
+        delay(150);
+      }
+}
 }
