@@ -16,6 +16,9 @@ void loop(){
   analogWrite(ledA,i); 
    delay(100); 
  } 
+  
+  delay (200); // Delay dari redup menuju penyalaan lampu selanjutnya
+  
   for (i=0; i<=255; i+=5){ // Untuk menyalakan fading pada led
     analogWrite(ledB,i); 
     delay(100); 
@@ -23,7 +26,10 @@ void loop(){
  for (i=255; i>=0; i-=5){  // Untuk meredupkan fading pada led
   analogWrite(ledB,i); 
    delay(100); 
- } 
+ }
+  
+  delay (200); // Delay dari redup menuju penyalaan lampu selanjutnya
+  
   for (i=0; i<=255; i+=5){ // Untuk menyalakan fading pada led
     analogWrite(ledC,i); 
     delay(100); 
